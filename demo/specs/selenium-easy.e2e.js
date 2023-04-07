@@ -20,7 +20,6 @@ describe('User interactions', () => {
 
     await $('form #user-message').setValue('Presidenten');
     await $('form .btn').click();
-    //$('#get-input button').click();
 
     const name = await $('#user-message #display').getText();
 
@@ -39,7 +38,6 @@ describe('User interactions', () => {
   });
 
   it('should be able to multi-select in dropdown (fails by design to gen video)', async() => {
-    //await $('#btn_basic_example').click();
     await browser.pause(300); // avoid animation effect
 
     await $('.list-group-item[href^="./basic-select-dropdown"]').click();
